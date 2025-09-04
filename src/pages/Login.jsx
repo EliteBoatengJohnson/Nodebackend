@@ -12,7 +12,7 @@ export function Login() {
 
   const loginMutation = useMutation({
     mutationFn: () => login({ username, password }),
-    onSuccess: () => (data) => {
+    onSuccess: (data) => {
       setToken(data.token)
       navigate('/')
     },
