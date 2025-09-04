@@ -23,7 +23,7 @@ export const login = async ({ username, password }) => {
 // getting user info by id
 
 export const getUserInfo = async (id) => {
-  const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/users/${id}`, {
+  const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/user/${id}`, {
     method: 'GET',
     headers: { 'Content-Type': 'application/json' },
   })
