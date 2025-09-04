@@ -16,7 +16,10 @@ export function Login() {
       setToken(data.token)
       navigate('/')
     },
-    onError: () => alert('failed to log in!'),
+    onError: (error) => {
+      console.error('login error', error)
+      alert('Login failed:', error.message)
+    },
   })
 
   const handleSubmit = (e) => {

@@ -11,7 +11,9 @@ export function Signup() {
   const signupMutation = useMutation({
     mutationFn: () => signUp({ username, password }),
     onSuccess: () => navigate('/login'),
-    onError: () => alert('failed to sign up!'),
+    onError: () => (error) => {
+      console.error('signup error:', error)
+    },
   })
 
   const handleSubmit = (e) => {
