@@ -16,7 +16,7 @@ export function Login() {
       setToken(data.token)
       navigate('/')
     },
-    onError: () => alert('failed to sign up!'),
+    onError: () => alert('failed to log in!'),
   })
 
   const handleSubmit = (e) => {
